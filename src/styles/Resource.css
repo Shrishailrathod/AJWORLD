@@ -1,0 +1,18 @@
+.Classes{
+    display:flex;
+    margin: 10px;
+    gap: 10px;
+   
+    }
+.Subjects{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.Subject{
+    border: none;
+    border-radius: 10px;
+}
+.Rathod{
+    background-color: red;
+}
