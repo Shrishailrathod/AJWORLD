@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from '../layouts/Navbar'
-import {
+import { 
   Box,
   Typography,
   TextField,
@@ -25,10 +25,10 @@ const ContactUs = () => {
             problem.
           </Typography>
           <Typography variant="body1" gutterBottom>
-            <strong>Email:</strong> rshrishail51@gmail.com
+            <strong>Email:</strong> test@gmail.com
           </Typography>
           <Typography variant="body1" gutterBottom>
-            <strong>Phone:</strong> +91 9353815319
+            <strong>Phone:</strong> +91 1234567890
           </Typography>
           <Link href="#" underline="hover" sx={{ fontWeight: "bold", mt: 2 }}>
             Customer Support

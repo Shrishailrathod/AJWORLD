@@ -6,7 +6,7 @@ import Resource from './components/Resource';
 import Classes from './components/Classes'
 // import ResourcesComputerApplication from './components/ResourcesComputerApplication'
 // import ClassSubjects from './components/ClassSubjects';
-// import Profile from './components/Profile';
+import Profile from './components/Profile';
 
 import './styles/Resource.css'
 
@@ -21,6 +21,7 @@ function App() {
           <Route path='/Resources' element={<Resource />}></Route>
           <Route path='/contactus' element={<ContactUs />}></Route>
           <Route path='/classes' element={<Classes />}></Route>
+          <Route path='/aboutus' element={<Profile />}></Route>
 
 
 

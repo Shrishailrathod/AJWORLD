@@ -1,7 +1,8 @@
 import React from "react";
-import BookKeeping from '../assets/BookKeeping.jpeg';
-import Computers from '../assets/Computer.jpg';
-import maths from '../assets/maths.jpeg';
+import BookKeeping from "../assets/BookKeeping.jpeg";
+import Computers from "../assets/Computer.jpg";
+import maths from "../assets/maths.jpeg";
+
 
 import {
   Box,
@@ -69,85 +70,87 @@ const resources = [
 const Resource = () => {
   return (
     <>
-    <Navbar />
-    <Box p={4} bgcolor="#f5f5f5" minHeight="100vh">
+      <Navbar />
+      <Box p={2} bgcolor="#f5f5f5" minHeight="100vh">
       
-      <Box
-        display="flex"
-        alignItems="center"
-        gap="10px"
-        mb={3}
-      >
-        <Typography variant="h6" fontWeight="bold">
-          Filter By Classes:
-        </Typography>
-        <Box display="flex" gap="5px">
-          <Button variant="contained" color="primary">
-            9th
-          </Button>
-          <Button variant="outlined" color="primary">
-            10th
-          </Button>
-          <Button variant="contained" color="secondary">
-            11th
-          </Button>
-          <Button variant="outlined" color="secondary">
-            12th
-          </Button>
+        <Box
+          display="flex"
+          alignItems="center"
+          flexWrap="wrap"
+          mb={3}
+          gap={1}
+        >
+          <Typography variant="h6" fontWeight="bold" sx={{ flexShrink: 0 }}>
+            Filter By Classes:
+          </Typography>
+          <Box display="flex" gap={1} flexWrap="wrap" flexGrow={1}>
+            <Button variant="contained" color="primary">
+              9th
+            </Button>
+            <Button variant="outlined" color="primary">
+              10th
+            </Button>
+            <Button variant="contained" color="secondary">
+              11th
+            </Button>
+            <Button variant="outlined" color="secondary">
+              12th
+            </Button>
+          </Box>
         </Box>
-      </Box>
 
       
-      <Box
-        display="flex"
-        alignItems="center"
-        gap="10px"
-        mb={4} 
-      >
-        <Typography variant="h6" fontWeight="bold">
-          Filter By Subjects:
-        </Typography>
-        <Box display="flex" gap="5px">
-          <Button variant="contained" color="success">
-            Science
-          </Button>
-          <Button variant="outlined" color="success">
-            Commerce
-          </Button>
-          <Button variant="contained" color="error">
-            Mathematics
-          </Button>
-          <Button variant="outlined" color="error">
-            Demo Subject
-          </Button>
+        <Box
+          display="flex"
+          alignItems="center"
+          flexWrap="wrap"
+          mb={4}
+          gap={1}
+        >
+          <Typography variant="h6" fontWeight="bold" sx={{ flexShrink: 0 }}>
+            Filter By Subjects:
+          </Typography>
+          <Box display="flex" gap={1} flexWrap="wrap" flexGrow={1}>
+            <Button variant="contained" color="success"  >
+              Science
+            </Button>
+            <Button variant="outlined" color="success">
+              Commerce
+            </Button>
+            <Button variant="contained" color="error">
+              Mathematics
+            </Button>
+            <Button variant="outlined" color="error">
+              Demo Subject
+            </Button>
+          </Box>
         </Box>
-      </Box>
 
-  
-      <Grid container spacing={3}>
-        {resources.map((resource) => (
-          <Grid item xs={12} sm={6} md={4} key={resource.id}>
-            <Card elevation={3}>
-              <CardMedia
-                component="img"
-                height="200"
-                image={resource.image}
-                alt={resource.title}
-              />
-              <CardContent>
-                <Typography variant="h6" fontWeight="bold">
-                  {resource.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary" mb={1}>
-                  {resource.professor}
-                </Typography>
-                <Chip label={resource.subject} variant="outlined" />
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+       
+        <Grid container spacing={3}>
+          {resources.map((resource) => (
+            <Grid item xs={12} sm={6} md={4} key={resource.id}>
+              <Card elevation={3} sx={{ height: "100%" }}>
+                <CardMedia
+                  component="img"
+                  height="200"
+                  image={resource.image}
+                  alt={resource.title}
+                />
+                <CardContent>
+                  <Typography variant="h6" fontWeight="bold" gutterBottom>
+                    {resource.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" mb={1}>
+                    {resource.professor}
+                  </Typography>
+                  <Chip label={resource.subject} variant="outlined" />
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </>
   );
 };
